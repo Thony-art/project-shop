@@ -13,7 +13,8 @@ class Program
         Console.WriteLine($"Product: {p1.GetName()}, Price: {p1.GetPrice()}");
         Console.WriteLine($"Customer: {c1.GetFirstname()} {c1.GetLastname()}, Email: {c1.GetEmail()}");
         Console.WriteLine($"Order Number: {o1.GetOrderNumber()}, Total Amount: {o1.GetTotalAmount()}, Is Paid: {o1.IsPaid()}");
-       
+        Item item1 = new Item("Phone", 800, 2);
+        Console.WriteLine($"Item: {item1.Name}, Price: {item1.Price}, Quantity: {item1.Quantity}");  
     }
 
 }
@@ -121,5 +122,60 @@ class Program
     public void SetIsPaid(bool isPaid)
     {
         this.isPaid = isPaid;
+    }
+}
+    class Item
+{
+    private string name;
+    private double price;
+    private int quantity;
+     
+    public Item( string name,double price,int quantity)
+    {
+        this.name=name;
+        this.price=price;
+        this.quantity=quantity;
+    }
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+    public double Price
+    {
+        get { return price; }
+        set { price = value; }
+    }
+    public int Quantity
+    {
+        get { return quantity; }
+        set { quantity = value; }
+    }
+}
+    class Supplier
+{
+    private string name;
+    private string city;
+    private string phone;
+    public Supplier(string name,string city,string phone)
+    {
+        this.name=name;
+        this.city=city;
+        this.phone=phone;
+    }
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+    public string City
+    {
+        get { return city; }
+        set { city = value; }
+    }
+    public string Phone
+    {
+        get { return phone; }
+        set { phone = value; }
     }
 }
