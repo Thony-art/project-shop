@@ -2,6 +2,12 @@
     {
         private string name;
         private double price;
+         public Product()
+    {
+        // On peut laisser vide, ou initialiser des valeurs par défaut
+        name = "";
+        price = 0;
+    }
 
         public Product(string name, double price)
         {
@@ -27,4 +33,7 @@
             this.price = price;
         }
 
+    
+
  }
+  
