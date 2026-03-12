@@ -14,11 +14,21 @@ class Program
         Console.WriteLine($"Customer: {c1.GetFirstname()} {c1.GetLastname()}, Email: {c1.GetEmail()}");
         Console.WriteLine($"Order Number: {o1.GetOrderNumber()}, Total Amount: {o1.GetTotalAmount()}, Is Paid: {o1.IsPaid()}");
         Item item1 = new Item("Phone", 800, 2);
-        Console.WriteLine($"Item: {item1.Name}, Price: {item1.Price}, Quantity: {item1.Quantity}");  
+        Console.WriteLine($"Item: {item1.Name}, Price: {item1.Price}, Quantity: {item1.Quantity}"); 
+        Supplier supplier1 = new Supplier("TechSupply", "Paris", "0102030405");
+        Console.WriteLine($"Supplier: {supplier1.Name}, City: {supplier1.City}, Phone: {supplier1.Phone}");
+        Category category1 = new Category("Electronics", "Electronic devices"); 
+        Category category2 = new Category("Books", "Books and literatures"); 
+        Category category3 = new Category("Clothing", "Clothing and accessories");
+        Console.WriteLine($"Category: {category1.Name}, Description: {category1.Description}");
+        Console.WriteLine($"Category: {category2.Name}, Description: {category2.Description}");
+        Console.WriteLine($"Category: {category3.Name}, Description: {category3.Description}");
+        ProductId productId1=new ProductId(1,"Tablet",600);
+        Console.WriteLine($"Product ID: {productId1.Id}, Name: {productId1.Name}, Price: {productId1.Price}");
     }
 
 }
- 
+  
     class Product
     {
         private string name;
@@ -178,4 +188,40 @@ class Program
         get { return phone; }
         set { phone = value; }
     }
+}
+    class Category
+{
+    private string name;
+    private string description;
+    public Category(string name,string description)
+    {
+        this.name=name;
+        this.description=description;
+    }
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+    public string Description
+    {
+        get { return description; }
+        set { description = value; }
+    }
+}
+    class ProductId
+{
+   private int id;
+   private string name;
+   private double price;
+   public ProductId(int id,string name,double price) 
+   {
+       this.id = id;
+       this.name = name;
+       this.price = price;
+   }
+    public int Id {get;}
+    public string Name {get;}
+    public double Price {get;}
+    
 }
