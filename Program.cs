@@ -23,8 +23,7 @@ class Program
         Console.WriteLine($"Category: {category1.Name}, Description: {category1.Description}");
         Console.WriteLine($"Category: {category2.Name}, Description: {category2.Description}");
         Console.WriteLine($"Category: {category3.Name}, Description: {category3.Description}");
-        ProductId productId1=new ProductId(1,"Tablet",600);
-        Console.WriteLine($"Product ID: {productId1.Id}, Name: {productId1.Name}, Price: {productId1.Price}");
+       
     }
 
 }
@@ -209,19 +208,4 @@ class Program
         set { description = value; }
     }
 }
-    class ProductId
-{
-   private int id;
-   private string name;
-   private double price;
-   public ProductId(int id,string name,double price) 
-   {
-       this.id = id;
-       this.name = name;
-       this.price = price;
-   }
-    public int Id {get;}
-    public string Name {get;}
-    public double Price {get;}
-    
-}
+ 
